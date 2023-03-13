@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<meta name="description" content="An experimental slideshow with an inclined look with three slide previews and a content view on click." />
+		<meta name="keywords" content="slideshow, javascript, tweenmax, rotation, animation, css" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="logo1.png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			button {
+  align-items: center;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+button:before {
+  background-color: #000000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+button:hover:before {
+  background-color: #000000;
+  width: 3rem;
+}
+		</style>
+		
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<main>
+			
+			<div class="content">
+
+				<article class="content__item">
+					
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://www.supercars.net/blog/wp-content/uploads/2022/01/McLaren-765LT.jpg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Sports</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='mclaren.png') }}" alt="zara" height="300px" width="300px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							McLaren is a pioneer that continuously pushes the boundaries. In 1981, it introduced lightweight and strong carbon fibre chassis into Formula 1 with the McLaren MP4/1. Then in 1993 it designed and built the McLaren F1 road car - the company has not built a car without a carbon fibre chassis since.
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://www.cartoq.com/wp-content/uploads/2022/03/thar-modified-featured-1.jpg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">SUV</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='thar.png') }}" alt="dior" height="300px" width="300px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							Mahindra Automotive North America unveiled a variant of the Thar for United States market called the Roxor at its assembly plant in Auburn Hills, Michigan. It is assembled from complete knock-down kits. Unlike the Thar, the Roxor is not street legal, and is positioned as a side-by-side off-road vehicle with a top speed of 45 mph. The Roxor is powered by a 2.5 L turbodiesel, four-cylinder engine producing 62 hp and 144 lb-ft of torque, mated to a five-speed manual transmission. An automatic transmission is available as an option. It is only available with two seats, a 148-inch body length, and a 96-inch wheelbase.[2]
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://wallpaperaccess.com/full/6660050.jpg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">sedan</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='volvo.png') }}" alt="hm" height="300px" width="300px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							The Volvo Group is a Swedish multinational manufacturing corporation headquartered in Gothenburg. While its core activity is the production, distribution and sale of trucks, buses and construction equipment, Volvo also supplies marine and industrial drive systems and financial services
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://www.mercedes-benz.com.mx/es/passengercars/the-brand/design/mercedes-amg-gt-concept/_jcr_content/par/productinfotextimage/media2/slides/videoimageslide_efb6/image.MQ6.7.20220708151026.jpeg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Performance</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='benz.png') }}" alt="prada" height="300px" width="300px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							Mercedes-Benz, commonly referred to as Mercedes and sometimes as Benz, is a German luxury and commercial vehicle automotive brand established in 1926. Mercedes-Benz AG is headquartered in Stuttgart, Baden-Württemberg, Germany.
+						</p>
+						
+					</div>
+				</article>
+			</div>
+			<div class="revealer">
+				<div class="revealer__inner"></div>
+			</div>
+			<div class="grid grid--slideshow">
+				<figure class="grid__item grid__item--slide">
+					<span class="number">01</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://www.supercars.net/blog/wp-content/uploads/2022/01/McLaren-765LT.jpg);"></div>
+					</div>
+					<figcaption class="caption">Sports</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">02</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://www.cartoq.com/wp-content/uploads/2022/03/thar-modified-featured-1.jpg);"></div>
+					</div>
+					<figcaption class="caption">SUV</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">03</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://wallpaperaccess.com/full/6660050.jpg);"></div>
+					</div>
+					<figcaption class="caption">Sedan</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">04</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://www.mercedes-benz.com.mx/es/passengercars/the-brand/design/mercedes-amg-gt-concept/_jcr_content/par/productinfotextimage/media2/slides/videoimageslide_efb6/image.MQ6.7.20220708151026.jpeg);"></div>
+					</div>
+					<figcaption class="caption">Performance</figcaption>
+				</figure>
+				<div class="titles-wrap">
+					<div class="grid grid--titles">
+						<h3 class="grid__item grid__item--title">Mclaren</h3>
+						<h3 class="grid__item grid__item--title">Thar</h3>
+						<h3 class="grid__item grid__item--title">Volvo</h3>
+						<h3 class="grid__item grid__item--title">Benz</h3>
+					</div>
+				</div>
+				<div class="grid grid--interaction">
+					<div class="grid__item grid__item--cursor grid__item--left"></div>
+					<div class="grid__item grid__item--cursor grid__item--center"></div>
+					<div class="grid__item grid__item--cursor grid__item--right"></div>
+				</div>
+			</div>
+			<div class="frame">
+				<div class="frame__title-wrap">
+<a href="http://127.0.0.1:8000/index.html"><h2><button>
+						Back
+					  </button></h2></a>
+					<h1 class="frame__title">Cars</h1>
+					
+					<div class="frame__mode" role="radiogroup">
+						<div class="frame__mode-item frame__mode-item--dark">
+							<input id="mode-1" type="radio" name="mode" class="frame__mode-input"></input>
+							<label class="frame__mode-label" for="mode-1">Dark mode</label>
+						</div>
+						<div class="frame__mode-item">
+							<input id="mode-2" type="radio" name="mode" class="frame__mode-input" checked></input>
+							<label class="frame__mode-label frame__mode-label--light" for="mode-2">Light mode</label>
+						</div>
+					</div>
+				</div>
+			</div><!-- /frame -->
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/charming.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/TweenMax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+	</body>
+</html>

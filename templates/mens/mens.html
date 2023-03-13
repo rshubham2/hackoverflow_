@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<meta name="description" content="An experimental slideshow with an inclined look with three slide previews and a content view on click." />
+		<meta name="keywords" content="slideshow, javascript, tweenmax, rotation, animation, css" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="logo1.png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			button {
+  align-items: center;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+button:before {
+  background-color: #000000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+button:hover:before {
+  background-color: #000000;
+  width: 3rem;
+}
+		</style>
+		
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<main>
+			
+			<div class="content">
+
+				<article class="content__item">
+					
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://img.ltwebstatic.com/images3_pi/2021/10/22/1634898955ad64d99fada8a06313794851e3b3ea42.webp);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Argyle</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='pngwing.com.png') }}" alt="zara" height="200px" width="230px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							If you are looking for an effortless yet stylish retro-vintage outfit, then grab yourself a pair of overalls. For a nostalgic vibe, wear denim overalls on top of your favorite shirt, sweater, or polo. Add the final touch with white sneakers or men's classic converse chucks. Read more: https://kami.com.ph/108333-vintage-outfit-men-best-trends-2020-photos.html
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://netstorage-kami.akamaized.net/images/1e41b5955448817e.jpg?imwidth=900);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Suspenders</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='dior.png') }}" alt="dior" height="200px" width="230px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							The history of suspenders dates back to the 18th century, and yet they are still a hot fashion item until today. The timeless charm of suspenders lies in its visually appealing design and usage. Instead of using a belt, you can opt to use suspenders to hold up your pants or trousers. Its sleek style fits oxford shirts perfectly. However, there are numerous creative and endearing ways to rock suspenders; all you have to do is mix and match. Read more: https://kami.com.ph/108333-vintage-outfit-men-best-trends-2020-photos.html
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://www.apetogentleman.com/wp-content/uploads/2021/08/best-all-white-outfits-men-1.jpg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Jacket</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='hm.png') }}" alt="hm" height="200px" width="230px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+							All white outfits shouldn’t be treated as some sort of high-level sartorial witchcraft that may only be wielded by Northern Italian fashionistos, ageing Balearic nightclub owners, and the occasional cult leader. It’s not rocket science. You – yes, you – can pull it off too with the right know-how and a bit of styling inspiration. And you should, because not only does all white look great when done right, it’ll also keep you cooler in hot weather and can even highlight your tan or complement your skin tone.
+						</p>
+						
+					</div>
+				</article>
+				<article class="content__item">
+					<div class="img-wrap img-wrap--content">
+						<div class="img img--content" style="background-image: url(https://www.apetogentleman.com/wp-content/uploads/2021/08/allwhiteoutfitslb8.jpg);"></div>
+					</div>
+					<header class="content__item-header">
+						<span class="content__item-header-meta">Casual</span>
+						<h2 class="content__item-header-title"><img src="{{ url_for('static', filename='prada.png') }}" alt="prada" height="200px" width="230px"></h2>
+					</header>
+					<div class="content__item-copy">
+						<p class="content__item-copy-text">
+						There’s not much going on in this look, but that’s exactly what we like about it. The few garments that do feature feel upscale and premium, which makes the outfit feel smart and sharp without being in any way formal.
+						</p>
+						
+					</div>
+				</article>
+			</div>
+			<div class="revealer">
+				<div class="revealer__inner"></div>
+			</div>
+			<div class="grid grid--slideshow">
+				<figure class="grid__item grid__item--slide">
+					<span class="number">01</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://img.ltwebstatic.com/images3_pi/2021/10/22/1634898955ad64d99fada8a06313794851e3b3ea42.webp);"></div>
+					</div>
+					<figcaption class="caption">Blazers</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">02</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://netstorage-kami.akamaized.net/images/1e41b5955448817e.jpg?imwidth=900);"></div>
+					</div>
+					<figcaption class="caption">Suspenders</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">03</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://www.apetogentleman.com/wp-content/uploads/2021/08/best-all-white-outfits-men-1.jpg);"></div>
+					</div>
+					<figcaption class="caption">Jacket</figcaption>
+				</figure>
+				<figure class="grid__item grid__item--slide">
+					<span class="number">04</span>
+					<div class="img-wrap">
+						<div class="img" style="background-image: url(https://www.apetogentleman.com/wp-content/uploads/2021/08/allwhiteoutfitslb8.jpg);"></div>
+					</div>
+					<figcaption class="caption">Casual</figcaption>
+				</figure>
+				<div class="titles-wrap">
+					<div class="grid grid--titles">
+						<h3 class="grid__item grid__item--title">ZARA</h3>
+						<h3 class="grid__item grid__item--title">Dior</h3>
+						<h3 class="grid__item grid__item--title">H&M</h3>
+						<h3 class="grid__item grid__item--title">Prada</h3>
+					</div>
+				</div>
+				<div class="grid grid--interaction">
+					<div class="grid__item grid__item--cursor grid__item--left"></div>
+					<div class="grid__item grid__item--cursor grid__item--center"></div>
+					<div class="grid__item grid__item--cursor grid__item--right"></div>
+				</div>
+			</div>
+			<div class="frame">
+				<div class="frame__title-wrap">
+<a href="http://127.0.0.1:8000/index.html"><h2><button>
+						Back
+					  </button></h2></a>
+					<h1 class="frame__title">Mens</h1>
+					
+					<div class="frame__mode" role="radiogroup">
+						<div class="frame__mode-item frame__mode-item--dark">
+							<input id="mode-1" type="radio" name="mode" class="frame__mode-input"></input>
+							<label class="frame__mode-label" for="mode-1">Dark mode</label>
+						</div>
+						<div class="frame__mode-item">
+							<input id="mode-2" type="radio" name="mode" class="frame__mode-input" checked></input>
+							<label class="frame__mode-label frame__mode-label--light" for="mode-2">Light mode</label>
+						</div>
+					</div>
+				</div>
+			</div><!-- /frame -->
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/charming.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/TweenMax.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+	</body>
+</html>

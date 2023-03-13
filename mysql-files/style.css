@@ -1,0 +1,270 @@
+body {
+	background: #23242a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form {
+	width: 500px;
+	
+	padding: 30px;
+	background: #28292d;
+	
+	flex-direction: column;
+	display: flex;
+	inset: 2px;
+	position: absolute;
+	z-index: 2;
+}
+
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+label {
+	color: #888;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	opacity: .7;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+.success {
+   background: #D4EDDA;
+   color: #40754C;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+.ca {
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #444;
+}
+.ca:hover {
+	text-decoration: underline;
+} 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.box
+{
+position: relative;
+width: 505px;
+height: 705px;
+background: #1c1c1c;
+border-radius: 8px;
+overflow: hidden;
+}
+.box::before
+{
+content: '';
+z-index: 1;
+position: absolute;
+top: -50%;
+left: -50%;
+width: 505px;
+height: 705px;
+transform-origin: bottom right;
+background: linear-gradient(0deg,transparent,#dedb10,#dedb10);
+animation: animate 6s linear infinite;
+}
+.box::after
+{
+content: '';
+z-index: 1;
+position: absolute;
+top: -50%;
+left: -50%;
+width: 505px;
+height: 705px;
+transform-origin: bottom right;
+background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+animation: animate 6s linear infinite;
+animation-delay: -3s;
+}
+@keyframes animate
+{
+0%
+{
+transform: rotate(0deg);
+}
+100%
+{
+transform: rotate(360deg);
+}
+}
+
+h1
+{
+color: #45f3ff;
+font-weight: 525;
+text-align: center;
+letter-spacing: 0.1em;
+}
+p
+{
+    color: #45f3ff;
+    font-weight: 100;
+
+    letter-spacing: 0.1em;  
+}
+.inputBox
+{
+position: relative;
+width: 300px;
+margin-top: 35px;
+}
+.inputBox input
+{
+position: relative;
+width: 100%;
+padding: 20px 10px 10px;
+background: transparent;
+outline: none;
+box-shadow: none;
+border: none;
+color: #23242a;
+font-size: 1em;
+letter-spacing: 0.05em;
+transition: 0.5s;
+z-index: 10;
+}
+.inputBox span
+{
+position: absolute;
+left: 0;
+padding: 20px 0px 10px;
+pointer-events: none;
+font-size: 1em;
+color: #8f8f8f;
+letter-spacing: 0.05em;
+transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+color: #45f3ff;
+transform: translateX(0px) translateY(-34px);
+font-size: 0.75em;
+}
+.inputBox i
+{
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2px;
+background: #45f3ff;
+border-radius: 4px;
+overflow: hidden;
+transition: 0.5s;
+pointer-events: none;
+z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+height: 44px;
+}
+.links
+{
+display: flex;
+justify-content: space-between;
+color: grey;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+.success {
+   background: #D4EDDA;
+   color: #40754C;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+.links a
+{
+margin: 10px 0;
+font-size: 0.75em;
+color: #8f8f8f;
+text-decoration: beige;
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+color: #45f3ff;
+}
+input[type="submit"]
+{
+border: none;
+outline: none;
+padding: 11px 25px;
+background: #45f3ff;
+cursor: pointer;
+border-radius: 4px;
+font-weight: 600;
+width: 100px;
+margin-top: 10px;
+}
+input[type="submit"]:active
+{
+opacity: 0.8;
+}
